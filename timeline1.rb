@@ -1,3 +1,4 @@
+require 'debugger'
 require 'twitter'
 client = Twitter::REST::Client.new do |config|
   config.consumer_key        = "HdvvOP7MKzMsQErS6CurXA"
@@ -7,5 +8,6 @@ client = Twitter::REST::Client.new do |config|
 end
 
 client.user do |tweet|
+  debugger
   puts tweet.text
 end
